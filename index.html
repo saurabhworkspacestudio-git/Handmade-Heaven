@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handmade Heaven | Handcrafted Bracelet Jewelry</title>
+  <meta name="description" content="Discover unique, handcrafted beaded bracelets made with love and care. Browse our pastel collection with WhatsApp ordering.">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.png" alt="Handmade Heaven Logo" class="nav-logo-img">
+        <span class="nav-logo-text">Handmade Heaven</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="catalogue.html">Shop</a></li>
+        <li><a href="#combos">Combo Deals</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-hamburger" id="navHamburger" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Cylindrical Video Carousel -->
+  <section class="hero hero-reelmark" id="hero">
+    <!-- Top badge -->
+    <div class="hero-top-badge animate-on-scroll">
+      <span class="badge badge-hero">✨ Trusted by 5,000+ happy bracelet lovers</span>
+    </div>
+
+    <!-- Centered Headlines -->
+    <div class="hero-header-wrap animate-on-scroll">
+      <h1 class="hero-main-title">
+        Captivate Hearts <br>
+        <span class="hero-highlight">with Handcrafted Reels ✨</span>
+      </h1>
+      <p class="hero-subline">
+        Each bracelet is individually beaded with pastel crackle glass, gleaming metallic accents, and love.<br>
+        Drag to spin through our live video collection or tap any reel to customize your piece.
+      </p>
+    </div>
+
+    <!-- Doodles & Handwritten Accents -->
+    <div class="hero-doodle-layer">
+      <!-- Slashes -->
+      <svg class="doodle-slashes" viewBox="0 0 60 60">
+        <line class="hand-stroke" x1="12" y1="48" x2="26" y2="12"/>
+        <line class="hand-stroke" x1="32" y1="48" x2="46" y2="12"/>
+      </svg>
+
+      <!-- Handwritten note right -->
+      <div class="hero-hand-note hero-note-right">
+        Be seen<br>with sparkle
+      </div>
+      <svg class="hero-arrow-right" viewBox="0 0 140 200">
+        <path class="hand-stroke" d="M 30 15 C 75 45, 115 110, 35 175" />
+        <polyline class="hand-stroke" points="30,160 32,176 48,178" />
+      </svg>
+
+      <!-- Handwritten note left -->
+      <div class="hero-hand-note hero-note-left">
+        Pair combos<br>save ₹50!
+      </div>
+      <svg class="hero-arrow-left" viewBox="0 0 60 50">
+        <path class="hand-stroke" d="M 10 25 Q 30 12 48 20" />
+        <polyline class="hand-stroke" points="38,10 50,20 40,30" />
+      </svg>
+    </div>
+
+    <!-- Cylindrical 10-Card Video Carousel Stage -->
+    <div class="reelmark-carousel-stage" id="reelCarouselStage" aria-label="Curved video reel showcase">
+      <!-- 8-10 product cards injected and morphed by app.js -->
+    </div>
+
+    <!-- Main Hero CTA Button -->
+    <div class="hero-cta-wrapper animate-on-scroll">
+      <div class="btn-cta-ring"></div>
+      <a href="catalogue.html" class="btn btn-hero-cta">Explore All Bracelets &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Featured Collection -->
+  <section class="section featured-products" id="featured">
+    <div class="container">
+      <div class="section-title text-center animate-on-scroll">
+        <span class="badge badge-popular" style="margin-bottom: 0.5rem;">Artisan Selection</span>
+        <h2>✨ Featured Collection</h2>
+        <div class="divider"></div>
+        <p>Our most-loved handcrafted bracelets, curated with soothing pastel tones and delicate details.</p>
+      </div>
+
+      <div class="products-grid" id="featuredGrid">
+        <!-- Rendered by app.js -->
+      </div>
+
+      <div class="text-center" style="margin-top: var(--space-2xl);">
+        <a href="catalogue.html" class="btn btn-primary btn-lg">Explore Full Collection &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Combo Deals Section -->
+  <section class="section combo-section" id="combos">
+    <div class="container">
+      <div class="combo-header animate-on-scroll">
+        <span class="combo-badge">Special Value Pair Offer</span>
+        <h2>Buy 2 &amp; Save! 💝</h2>
+        <p>Mix &amp; match your favorite pieces or gift one to a bestie. Save big on all bracelet combos!</p>
+      </div>
+
+      <div class="pricing-grid animate-on-scroll" id="pricingCards">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+      <div class="text-center" style="margin-top: var(--space-2xl); display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="catalogue.html" class="btn btn-whatsapp btn-lg">Order Combos on WhatsApp &rarr;</a>
+        <a href="https://www.instagram.com/handmadeheaven2407?utm_source=ig_web_button_share_sheet&xtok=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="border-color: #AB5E7B; color: #7D0642; font-weight: 600;">Order on Instagram &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-title text-center animate-on-scroll">
+        <h2>Why You'll Love Handmade Heaven</h2>
+        <div class="divider"></div>
+        <p>Every piece is thoughtfully designed, handcrafted, and packaged with personal care.</p>
+      </div>
+
+      <div class="features-grid animate-on-scroll">
+        <div class="feature-card">
+          <div class="feature-icon">🤲</div>
+          <h3>100% Handcrafted</h3>
+          <p>Each bracelet is strung individually with reinforced elastic cord and hand-selected beads.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3>Pastel Aesthetic</h3>
+          <p>Curated pastel palettes: blush pink, lavender, peach, sage green, and berry plum.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Affordable Luxury</h3>
+          <p>Handmade jewelry starting from ₹120 with unbeatable combo pair discounts.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>Direct WhatsApp Orders</h3>
+          <p>Chat directly with the maker, customize sizes, and confirm fast shipping.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="about-wrapper">
+        <div class="about-text animate-on-scroll">
+          <h2>Crafted with Heart, Worn with Joy</h2>
+          <p>
+            Welcome to <strong>Handmade Heaven</strong>! We believe beautiful jewellery doesn't need to be mass-produced. Every single bracelet in our studio is assembled by hand, bead by bead, ensuring personal attention to detail.
+          </p>
+          <p>
+            From stunning cracked glass beads that catch the morning sunlight to elegant golden accents and soothing pastel contrasts, our collection is made for everyday wear and thoughtful gifts.
+          </p>
+          <p>
+            Have a custom wrist size or want a special color pairing? We love creating bespoke orders! Reach out directly via WhatsApp and let's craft your dream bracelet.
+          </p>
+          <a href="#contact" class="btn btn-outline-dark" style="margin-top: var(--space-md);">Get in Touch</a>
+        </div>
+        <div class="about-visual animate-on-scroll">
+          <div class="about-decorative">
+            <img src="assets/images/hero/2.jpg" alt="Handmade Heaven craft artistry" style="width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-xl);">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram & WhatsApp Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-title text-center animate-on-scroll">
+        <h2>Order &amp; Connect With Us</h2>
+        <div class="divider"></div>
+        <p>Ordering is simple, direct, and personalized!</p>
+      </div>
+
+      <div class="contact-grid animate-on-scroll">
+        <div class="contact-block contact-block-instagram">
+          <div class="instagram-card-inner">
+            <div class="instagram-qr-wrap">
+              <img src="assets/images/instagram-qr.png" alt="Handmade Heaven Instagram QR Code" class="instagram-qr-img">
+              <span class="qr-scan-hint">Scan with phone camera or Instagram</span>
+            </div>
+            <div class="instagram-card-info">
+              <h3>📸 Order &amp; Follow on Instagram</h3>
+              <p>DM us to place your order directly on Instagram! Explore new drops, customer styling, and custom requests.</p>
+              <div class="instagram-actions-wrap">
+                <a href="https://www.instagram.com/handmadeheaven2407?utm_source=ig_web_button_share_sheet&xtok=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="instagram-link">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                  </svg>
+                  <span>Order via Instagram DM &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-block">
+          <h3>💬 Order on WhatsApp</h3>
+          <p>Direct chat for instant inquiries, custom wrist sizing, color requests, and order placement.</p>
+          <a id="homeWhatsappBtn" href="https://wa.me/919XXXXXXXXX" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-lg">
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>
+            <img src="assets/images/logo.png" alt="Handmade Heaven Logo" class="footer-logo-img">
+            <span>Handmade Heaven</span>
+          </h3>
+          <p>Artisan beaded bracelet storefront. Crafted with love, pastel aesthetics, and attention to quality.</p>
+          <p style="margin-top: var(--space-sm); font-size: 0.8rem; opacity: 0.6;">📦 Shipping charges are extra and calculated per delivery location.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogue.html">Shop Catalogue</a></li>
+            <li><a href="#combos">Combo Offers</a></li>
+            <li><a href="#about">About Our Craft</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/handmadeheaven2407?utm_source=ig_web_button_share_sheet&xtok=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram (@handmadeheaven2407)</a></li>
+            <li><a href="https://wa.me/919XXXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp Business</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 Handmade Heaven. All rights reserved. Crafted with ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

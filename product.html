@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bracelet Details | Handmade Heaven</title>
+  <meta name="description" content="Explore photos, video preview, zoom, combo pricing, and order this handcrafted bracelet directly on WhatsApp.">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.png" alt="Handmade Heaven Logo" class="nav-logo-img">
+        <span class="nav-logo-text">Handmade Heaven</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalogue.html" class="active">Shop</a></li>
+        <li><a href="index.html#combos">Combo Deals</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-hamburger" id="navHamburger" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product Detail Section -->
+  <main class="product-detail">
+    <div class="container" id="productContainer">
+
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="sep">/</span>
+        <a href="catalogue.html">Shop</a>
+        <span class="sep">/</span>
+        <span id="breadcrumbCurrent">Product</span>
+      </nav>
+
+      <!-- Main Layout -->
+      <div class="product-detail-grid" id="productDetailGrid">
+        
+        <!-- Left: Gallery -->
+        <div class="gallery">
+          <div class="gallery-main" id="galleryMain">
+            <img id="mainImage" src="" alt="Product Image">
+            <video id="mainVideo" controls muted loop playsinline style="display: none;"></video>
+            <div id="productBadgeOverlay"></div>
+          </div>
+          <div class="gallery-thumbnails" id="galleryThumbnails">
+            <!-- Populated by app.js -->
+          </div>
+        </div>
+
+        <!-- Right: Info & Actions -->
+        <div class="product-info">
+          <span class="product-category-badge" id="productCategory">Category</span>
+          <h1 id="productTitle">Bracelet Name</h1>
+          <p class="product-type" id="productType">Bead Type</p>
+
+          <div class="product-price-block">
+            <div class="product-price-main" id="productPrice">₹150</div>
+            <div class="product-combo-box" id="productComboBox">
+              <span>💝</span>
+              <span id="productComboText">Buy 2 for just ₹260! (Save ₹40)</span>
+            </div>
+          </div>
+
+          <p class="product-description" id="productDescription">Handcrafted bracelet details...</p>
+
+          <div class="product-colors" id="productColors">
+            <span class="product-colors-label">Colors:</span>
+            <div id="colorDotsList" style="display: inline-flex; gap: 0.5rem; flex-wrap: wrap;"></div>
+          </div>
+
+          <!-- Purchase Configuration -->
+          <div style="background: var(--color-card); padding: var(--space-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); margin-bottom: var(--space-xl);">
+            <div style="margin-bottom: var(--space-md);">
+              <label style="font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 0.4rem;">Select Option:</label>
+              <div style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+                <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer; font-size: 0.9rem;">
+                  <input type="radio" name="orderOption" value="single" checked id="optSingle">
+                  <span>Single Piece (<span id="optSinglePrice">₹150</span>)</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.4rem; cursor: pointer; font-size: 0.9rem;">
+                  <input type="radio" name="orderOption" value="combo" id="optCombo">
+                  <span>Combo of 2 (<span id="optComboPrice">₹260</span>)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Quantity Selector -->
+            <div class="quantity-selector">
+              <span class="quantity-label">Quantity:</span>
+              <div class="quantity-control">
+                <button type="button" class="qty-btn" id="qtyMinus" aria-label="Decrease">&minus;</button>
+                <input type="text" class="qty-value" id="qtyValue" value="1" readonly>
+                <button type="button" class="qty-btn" id="qtyPlus" aria-label="Increase">+</button>
+              </div>
+            </div>
+
+            <div class="product-total">
+              Subtotal: <strong id="calculatedTotal">₹150</strong>
+            </div>
+
+            <div class="product-order-actions" style="display: flex; flex-direction: column; gap: 0.75rem;">
+              <button class="btn btn-whatsapp btn-lg btn-block" id="btnOrderWhatsapp" style="width: 100%; justify-content: center;">
+                💬 Order on WhatsApp
+              </button>
+              <a href="https://www.instagram.com/handmadeheaven2407?utm_source=ig_web_button_share_sheet&xtok=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg btn-block" id="btnOrderInstagram" style="width: 100%; justify-content: center; border-color: #AB5E7B; color: #7D0642; font-weight: 600;">
+                📸 Order on Instagram (DM)
+              </a>
+            </div>
+          </div>
+
+          <div class="product-meta-info">
+            <p>✅ <strong>Availability:</strong> Handcrafted to order</p>
+            <p>📦 <strong>Shipping:</strong> Charges calculated separately based on delivery pin code</p>
+            <p>💎 <strong>Cord:</strong> Durable high-elastic stretch wire</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Not Found Message -->
+      <div class="product-not-found" id="productNotFound" style="display: none;">
+        <div class="nf-icon">🔍</div>
+        <h2>Bracelet Not Found</h2>
+        <p>We couldn't locate the bracelet you requested. Browse our active catalogue to discover more handcrafted designs!</p>
+        <a href="catalogue.html" class="btn btn-primary">Browse Catalogue</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- You May Also Like Section -->
+  <section class="related-section" id="relatedSection">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>You May Also Like ✨</h2>
+        <div class="divider"></div>
+        <p>Discover complementary bracelets handcrafted with love.</p>
+      </div>
+
+      <div class="products-grid" id="relatedGrid">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>
+            <img src="assets/images/logo.png" alt="Handmade Heaven Logo" class="footer-logo-img">
+            <span>Handmade Heaven</span>
+          </h3>
+          <p>Artisan beaded bracelet storefront. Crafted with love, pastel aesthetics, and attention to quality.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogue.html">Shop Catalogue</a></li>
+            <li><a href="index.html#combos">Combo Offers</a></li>
+            <li><a href="index.html#about">About Our Craft</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/handmadeheaven2407?utm_source=ig_web_button_share_sheet&xtok=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram (@handmadeheaven2407)</a></li>
+            <li><a href="https://wa.me/919XXXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp Business</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 Handmade Heaven. All rights reserved. Crafted with ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All Bracelets | Handmade Heaven</title>
+  <meta name="description" content="Explore the full collection of handmade beaded bracelets. Filter by category, sort by price, and order seamlessly via WhatsApp.">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/images/logo.png" alt="Handmade Heaven Logo" class="nav-logo-img">
+        <span class="nav-logo-text">Handmade Heaven</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalogue.html" class="active">Shop</a></li>
+        <li><a href="index.html#combos">Combo Deals</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div class="nav-hamburger" id="navHamburger" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Our Collection</h1>
+      <p class="product-count" id="productCount">Showing 11 designs</p>
+    </div>
+  </header>
+
+  <!-- Filter & Sort Bar -->
+  <section class="filter-bar">
+    <div class="container">
+      <div class="filter-pills" id="categoryFilterPills">
+        <!-- Rendered by app.js -->
+      </div>
+      <div>
+        <select class="sort-select" id="sortSelect" aria-label="Sort Bracelets">
+          <option value="featured">Featured First</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name-asc">Name: A to Z</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <main class="section catalogue-section">
+    <div class="container">
+      <div class="products-grid" id="catalogueGrid">
+        <!-- Rendered by app.js -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <div class="empty-icon">🌸</div>
+        <h3 id="emptyTitle">Coming Soon!</h3>
+        <p id="emptyDesc">We are currently handcrafting designs for this category. Stay tuned on Instagram or check back shortly!</p>
+        <button class="btn btn-primary" id="btnResetFilter" style="margin-top: var(--space-md);">View All Bracelets</button>
+      </div>
+
+      <!-- Shipping notice & Order options -->
+      <div class="text-center" style="margin-top: var(--space-3xl); padding: var(--space-xl); background: var(--color-card); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid var(--color-card-border);">
+        <p style="color: var(--color-text); font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem;">
+          🛍️ Order via WhatsApp or Instagram Direct Message!
+        </p>
+        <p style="color: var(--color-text-light); font-size: 0.9rem;">
+          📦 <strong>Shipping Policy:</strong> Standard shipping charges are calculated separately per delivery location at order confirmation.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>
+            <img src="assets/images/logo.png" alt="Handmade Heaven Logo" class="footer-logo-img">
+            <span>Handmade Heaven</span>
+          </h3>
+          <p>Artisan beaded bracelet storefront. Crafted with love, pastel aesthetics, and attention to quality.</p>
+        </div>
+        <div>
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogue.html">Shop Catalogue</a></li>
+            <li><a href="index.html#combos">Combo Offers</a></li>
+            <li><a href="index.html#about">About Our Craft</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/handmadeheaven2407?utm_source=ig_web_button_share_sheet&xtok=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">Instagram (@handmadeheaven2407)</a></li>
+            <li><a href="https://wa.me/919XXXXXXXXX" target="_blank" rel="noopener noreferrer">WhatsApp Business</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom text-center">
+        <p>&copy; 2026 Handmade Heaven. All rights reserved. Crafted with ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
