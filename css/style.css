@@ -227,25 +227,49 @@ h4 {
 }
 
 .btn-primary {
-  background: var(--gradient-primary);
-  color: var(--color-text);
-  box-shadow: 0 4px 16px rgba(255, 182, 193, .35);
+  background: linear-gradient(135deg, #7D0642 0%, #AB5E7B 100%);
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 16px rgba(125, 6, 66, 0.25);
+  font-weight: 700;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 182, 193, .5);
+  background: linear-gradient(135deg, #AB5E7B 0%, #7D0642 100%);
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 24px rgba(125, 6, 66, 0.38);
 }
 
 .btn-secondary {
-  border: 2px solid var(--color-primary);
-  color: var(--color-dark);
-  background: transparent;
+  border: 2px solid #7D0642;
+  color: #7D0642;
+  background: #FFFFFF;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(125, 6, 66, 0.08);
 }
 
 .btn-secondary:hover {
-  background: var(--color-primary);
-  color: #fff;
+  background: #7D0642;
+  color: #FFFFFF !important;
+  border-color: #7D0642;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(125, 6, 66, 0.22);
+}
+
+.btn-instagram {
+  background: #FFFFFF;
+  color: #7D0642;
+  border: 2px solid #7D0642;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(125, 6, 66, 0.08);
+}
+
+.btn-instagram:hover {
+  background: linear-gradient(135deg, #7D0642 0%, #AB5E7B 100%);
+  color: #FFFFFF !important;
+  border-color: #7D0642;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(125, 6, 66, 0.25);
 }
 
 .btn-whatsapp {
