@@ -437,30 +437,36 @@ h4 {
 .nav-hamburger {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
-  padding: var(--space-sm);
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  cursor: pointer;
   z-index: 1100;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .nav-hamburger span {
   display: block;
   width: 24px;
-  height: 2px;
-  background: var(--color-text);
+  height: 2.5px;
+  background: #FFFFFF;
   border-radius: 2px;
-  transition: all var(--ease);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.nav-hamburger.open span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+.nav-hamburger.active span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
 }
 
-.nav-hamburger.open span:nth-child(2) {
+.nav-hamburger.active span:nth-child(2) {
   opacity: 0;
 }
 
-.nav-hamburger.open span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+.nav-hamburger.active span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
 }
 
 /* Mobile menu overlay */
@@ -521,6 +527,7 @@ h4 {
     left: 0;
     right: 0;
     background: #7D0642;
+    display: flex;
     flex-direction: column;
     padding: var(--space-xl);
     gap: var(--space-lg);
@@ -529,7 +536,7 @@ h4 {
     transform: translateY(-150%);
     opacity: 0;
     pointer-events: none;
-    transition: transform var(--ease), opacity var(--ease);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
     z-index: 999;
   }
 
@@ -540,10 +547,17 @@ h4 {
   }
 
   .nav-links a {
-    font-size: 1.1rem;
-    padding: 0.5rem 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding: 0.65rem 0;
     display: block;
-    border-bottom: 1px solid rgba(242, 219, 207, 0.15);
+    border-bottom: 1px solid rgba(242, 219, 207, 0.2);
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #F2DBCF;
   }
 }
 
@@ -689,7 +703,7 @@ h4 {
   margin: 1rem 0 2rem;
   cursor: grab;
   z-index: 20;
-  touch-action: none;
+  touch-action: pan-y;
   overflow: hidden;
 }
 

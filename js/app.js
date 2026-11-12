@@ -175,6 +175,9 @@ function initReelmarkCarousel() {
   let scrollOffset = 0;
   let velocity = -42; // smooth right -> left drift (42u/s)
   let isDragging = false;
+  let isHorizontalDrag = false;
+  let startPointerX = 0;
+  let startPointerY = 0;
   let lastPointerX = 0;
   let lastTime = performance.now();
   let dragVelocity = 0;
@@ -303,24 +306,47 @@ function initReelmarkCarousel() {
   // Pointer & Touch Drag Events
   function onPointerDown(e) {
     isDragging = true;
-    lastPointerX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+    isHorizontalDrag = false;
+    const clientX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
+    const clientY = e.clientY || (e.touches && e.touches[0].clientY) || 0;
+    startPointerX = clientX;
+    startPointerY = clientY;
+    lastPointerX = clientX;
     dragVelocity = 0;
   }
 
   function onPointerMove(e) {
     if (!isDragging) return;
     const currentX = e.clientX || (e.touches && e.touches[0].clientX) || 0;
-    const delta = currentX - lastPointerX;
-    lastPointerX = currentX;
+    const currentY = e.clientY || (e.touches && e.touches[0].clientY) || 0;
+    const diffX = Math.abs(currentX - startPointerX);
+    const diffY = Math.abs(currentY - startPointerY);
 
-    const scale = getScale();
-    scrollOffset += delta / (scale || 1);
-    dragVelocity = (delta / (scale || 1)) * 60;
+    // If movement is predominantly vertical on touch devices, yield to native page scroll!
+    if (!isHorizontalDrag && e.touches) {
+      if (diffY > diffX && diffY > 6) {
+        isDragging = false;
+        return;
+      }
+      if (diffX > diffY && diffX > 6) {
+        isHorizontalDrag = true;
+      }
+    }
+
+    if (isHorizontalDrag || !e.touches) {
+      const delta = currentX - lastPointerX;
+      lastPointerX = currentX;
+
+      const scale = getScale();
+      scrollOffset += delta / (scale || 1);
+      dragVelocity = (delta / (scale || 1)) * 60;
+    }
   }
 
   function onPointerUp() {
     if (!isDragging) return;
     isDragging = false;
+    isHorizontalDrag = false;
     if (Math.abs(dragVelocity) > 10) {
       velocity = dragVelocity;
     }
