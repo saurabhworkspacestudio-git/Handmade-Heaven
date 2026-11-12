@@ -257,19 +257,25 @@ h4 {
 }
 
 .btn-instagram {
-  background: #FFFFFF;
-  color: #7D0642;
-  border: 2px solid #7D0642;
+  background: linear-gradient(135deg, #7D0642 0%, #AB5E7B 100%);
+  color: #FFFFFF !important;
+  border: 2px solid #FFFFFF;
   font-weight: 700;
-  box-shadow: 0 4px 14px rgba(125, 6, 66, 0.08);
+  box-shadow: 0 4px 16px rgba(125, 6, 66, 0.35);
 }
 
 .btn-instagram:hover {
-  background: linear-gradient(135deg, #7D0642 0%, #AB5E7B 100%);
+  background: linear-gradient(135deg, #AB5E7B 0%, #7D0642 100%);
   color: #FFFFFF !important;
-  border-color: #7D0642;
+  border-color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(125, 6, 66, 0.25);
+  box-shadow: 0 8px 24px rgba(125, 6, 66, 0.5);
+}
+
+.combo-section {
+  background: linear-gradient(135deg, #FAF3F0 0%, #F2DBCF 50%, #E8D3CA 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-whatsapp {
@@ -1038,7 +1044,7 @@ h4 {
 
 /* ---------- Combo Deals Section ---------- */
 .combo-section {
-  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary) 60%, var(--color-accent1));
+  background: linear-gradient(135deg, #FAF3F0 0%, #F2DBCF 50%, #FAF3F0 100%);
   position: relative;
   overflow: hidden;
 }
