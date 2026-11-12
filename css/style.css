@@ -226,50 +226,74 @@ h4 {
   letter-spacing: .3px;
 }
 
-.btn-primary {
-  background: linear-gradient(135deg, #7D0642 0%, #AB5E7B 100%);
+.btn-primary,
+.btn-primary:visited,
+.btn-primary:link,
+a.btn-primary {
+  background: linear-gradient(135deg, #7D0642 0%, #AB5E7B 100%) !important;
   color: #FFFFFF !important;
-  box-shadow: 0 4px 16px rgba(125, 6, 66, 0.25);
-  font-weight: 700;
+  -webkit-text-fill-color: #FFFFFF !important;
+  box-shadow: 0 4px 16px rgba(125, 6, 66, 0.35);
+  font-weight: 700 !important;
+  text-decoration: none !important;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  background: linear-gradient(135deg, #AB5E7B 0%, #7D0642 100%);
+  background: linear-gradient(135deg, #AB5E7B 0%, #7D0642 100%) !important;
   color: #FFFFFF !important;
-  box-shadow: 0 8px 24px rgba(125, 6, 66, 0.38);
+  -webkit-text-fill-color: #FFFFFF !important;
+  box-shadow: 0 8px 24px rgba(125, 6, 66, 0.5);
 }
 
-.btn-secondary {
-  border: 2px solid #7D0642;
-  color: #7D0642;
-  background: #FFFFFF;
-  font-weight: 700;
-  box-shadow: 0 4px 14px rgba(125, 6, 66, 0.08);
+.btn-secondary,
+a.btn-secondary {
+  border: 2px solid #FFFFFF !important;
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+  background: linear-gradient(135deg, #7D0642 0%, #AB5E7B 100%) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 16px rgba(125, 6, 66, 0.35);
+  text-decoration: none !important;
 }
 
 .btn-secondary:hover {
-  background: #7D0642;
+  background: linear-gradient(135deg, #AB5E7B 0%, #7D0642 100%) !important;
   color: #FFFFFF !important;
-  border-color: #7D0642;
+  -webkit-text-fill-color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(125, 6, 66, 0.22);
+  box-shadow: 0 6px 20px rgba(125, 6, 66, 0.5);
 }
 
-.btn-instagram {
-  background: linear-gradient(135deg, #7D0642 0%, #AB5E7B 100%);
+.btn-instagram,
+.btn-instagram:visited,
+.btn-instagram:link,
+a.btn-instagram {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: var(--space-sm) !important;
+  padding: .875rem 2rem !important;
+  border-radius: var(--radius-full) !important;
+  background: linear-gradient(135deg, #7D0642 0%, #AB5E7B 100%) !important;
   color: #FFFFFF !important;
-  border: 2px solid #FFFFFF;
-  font-weight: 700;
-  box-shadow: 0 4px 16px rgba(125, 6, 66, 0.35);
+  -webkit-text-fill-color: #FFFFFF !important;
+  border: 2px solid #FFFFFF !important;
+  font-size: 1.02rem !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 18px rgba(125, 6, 66, 0.35) !important;
+  text-decoration: none !important;
+  transition: all var(--ease) !important;
 }
 
 .btn-instagram:hover {
-  background: linear-gradient(135deg, #AB5E7B 0%, #7D0642 100%);
+  background: linear-gradient(135deg, #AB5E7B 0%, #7D0642 100%) !important;
   color: #FFFFFF !important;
-  border-color: #FFFFFF;
+  -webkit-text-fill-color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(125, 6, 66, 0.5);
+  box-shadow: 0 8px 24px rgba(125, 6, 66, 0.5) !important;
 }
 
 .combo-section {
