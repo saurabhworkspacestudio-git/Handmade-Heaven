@@ -511,12 +511,39 @@ h4 {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
   .nav-hamburger {
     display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: #7D0642;
+    flex-direction: column;
+    padding: var(--space-xl);
+    gap: var(--space-lg);
+    box-shadow: 0 10px 30px rgba(125, 6, 66, 0.45);
+    border-bottom: 2px solid #AB5E7B;
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--ease), opacity var(--ease);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    display: block;
+    border-bottom: 1px solid rgba(242, 219, 207, 0.15);
   }
 }
 
